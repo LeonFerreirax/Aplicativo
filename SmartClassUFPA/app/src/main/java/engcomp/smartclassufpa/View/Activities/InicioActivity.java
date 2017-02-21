@@ -134,6 +134,18 @@ public class InicioActivity extends BaseActivity {
         RedesII.setSala("Sala 02 Itec");
         banco.adicionar(RedesII);
 
+        Disciplina HorarioVago = new Disciplina("NULL", "Horário Vago", "CONTINUE ESTUDANDO MESMO ASSIM", "NULL");
+        HorarioVago.setTurma("02A");
+        HorarioVago.setSala("Sala de estudos");
+        banco.adicionar(HorarioVago);
+
+        Disciplina NaoTemAula = new Disciplina("null", "Não têm aula nesse dia", "VOCÊ PODE DESCANSAR UM POUCO HOJE", "null");
+        NaoTemAula.setTurma("02A");
+        NaoTemAula.setSala("Em casa ou estudando na faculdade");
+        banco.adicionar(NaoTemAula);
+
+        //Horários de Segunda
+
         Horario segunda1 = new Horario();
         segunda1.setDisciplina(Probabilidade);
         segunda1.setDia_semana(Horario.SEGUNDA);
@@ -175,6 +187,153 @@ public class InicioActivity extends BaseActivity {
         segunda6.setN_horario(Horario.SEXTO_HOR);
         segunda6.setHorario(Horario.SEXTO_HOR_STR);
         banco.adicionar(segunda6);
+
+        //Horários de Terça
+
+        Horario terça1 = new Horario();
+        terça1.setDisciplina(HorarioVago);
+        terça1.setDia_semana(Horario.TERÇA);
+        terça1.setN_horario(Horario.PRIMEIRO_HOR);
+        terça1.setHorario(Horario.PRIMEIRO_HOR_STR);
+        banco.adicionar(terça1);
+
+        Horario terça2 = new Horario();
+        terça2.setDisciplina(HorarioVago);
+        terça2.setDia_semana(Horario.TERÇA);
+        terça2.setN_horario(Horario.SEGUNDO_HOR);
+        terça2.setHorario(Horario.SEGUNDO_HOR_STR);
+        banco.adicionar(terça2);
+
+        Horario terça3 = new Horario();
+        terça3.setDisciplina(RedesII);
+        terça3.setDia_semana(Horario.TERÇA);
+        terça3.setN_horario(Horario.TERCEIRO_HOR);
+        terça3.setHorario(Horario.TERCEIRO_HOR_STR);
+        banco.adicionar(terça3);
+
+        Horario terça4 = new Horario();
+        terça4.setDisciplina(RedesII);
+        terça4.setDia_semana(Horario.TERÇA);
+        terça4.setN_horario(Horario.QUARTO_HOR);
+        terça4.setHorario(Horario.QUARTO_HOR_STR);
+        banco.adicionar(terça4);
+
+        Horario terça5 = new Horario();
+        terça5.setDisciplina(Eletronica);
+        terça5.setDia_semana(Horario.TERÇA);
+        terça5.setN_horario(Horario.QUINTO_HOR);
+        terça5.setHorario(Horario.QUINTO_HOR_STR);
+        banco.adicionar(terça5);
+
+        Horario terça6 = new Horario();
+        terça6.setDisciplina(Eletronica);
+        terça6.setDia_semana(Horario.TERÇA);
+        terça6.setN_horario(Horario.SEXTO_HOR);
+        terça6.setHorario(Horario.SEXTO_HOR_STR);
+        banco.adicionar(terça6);
+
+        // Hoŕarios de Quarta
+
+        Horario quarta1 = new Horario();
+        quarta1.setDisciplina(Probabilidade);
+        quarta1.setDia_semana(Horario.QUARTA);
+        quarta1.setN_horario(Horario.PRIMEIRO_HOR);
+        quarta1.setHorario(Horario.PRIMEIRO_HOR_STR);
+        banco.adicionar(quarta1);
+
+        Horario quarta2 = new Horario();
+        quarta2.setDisciplina(Probabilidade);
+        quarta2.setDia_semana(Horario.QUARTA);
+        quarta2.setN_horario(Horario.SEGUNDO_HOR);
+        quarta2.setHorario(Horario.SEGUNDO_HOR_STR);
+        banco.adicionar(quarta2);
+
+        Horario quarta3 = new Horario();
+        quarta3.setDisciplina(Eletronica);
+        quarta3.setDia_semana(Horario.QUARTA);
+        quarta3.setN_horario(Horario.TERCEIRO_HOR);
+        quarta3.setHorario(Horario.TERCEIRO_HOR_STR);
+        banco.adicionar(quarta3);
+
+        Horario quarta4 = new Horario();
+        quarta4.setDisciplina(Eletronica);
+        quarta4.setDia_semana(Horario.QUARTA);
+        quarta4.setN_horario(Horario.QUARTO_HOR);
+        quarta4.setHorario(Horario.QUARTO_HOR_STR);
+        banco.adicionar(quarta4);
+
+        Horario quarta5 = new Horario();
+        quarta5.setDisciplina(sinaisSistemas);
+        quarta5.setDia_semana(Horario.QUARTA);
+        quarta5.setN_horario(Horario.QUINTO_HOR);
+        quarta5.setHorario(Horario.QUINTO_HOR_STR);
+        banco.adicionar(quarta5);
+
+        Horario quarta6 = new Horario();
+        quarta6.setDisciplina(sinaisSistemas);
+        quarta6.setDia_semana(Horario.QUARTA);
+        quarta6.setN_horario(Horario.SEXTO_HOR);
+        quarta6.setHorario(Horario.SEXTO_HOR_STR);
+        banco.adicionar(quarta6);
+
+        //Horários de Quinta
+
+        Horario quinta1 = new Horario();
+        quinta1.setDisciplina(Eletronica);
+        quinta1.setDia_semana(Horario.QUINTA);
+        quinta1.setN_horario(Horario.PRIMEIRO_HOR);
+        quinta1.setHorario(Horario.PRIMEIRO_HOR_STR);
+        banco.adicionar(quinta1);
+
+        Horario quinta2 = new Horario();
+        quinta2.setDisciplina(Eletronica);
+        quinta2.setDia_semana(Horario.QUINTA);
+        quinta2.setN_horario(Horario.SEGUNDO_HOR);
+        quinta2.setHorario(Horario.SEGUNDO_HOR_STR);
+        banco.adicionar(quinta2);
+
+        Horario quinta3 = new Horario();
+        quinta3.setDisciplina(RedesII);
+        quinta3.setDia_semana(Horario.QUINTA);
+        quinta3.setN_horario(Horario.TERCEIRO_HOR);
+        quinta3.setHorario(Horario.TERCEIRO_HOR_STR);
+        banco.adicionar(quinta3);
+
+        Horario quinta4 = new Horario();
+        quinta4.setDisciplina(RedesII);
+        quinta4.setDia_semana(Horario.QUINTA);
+        quinta4.setN_horario(Horario.QUARTO_HOR);
+        quinta4.setHorario(Horario.QUARTO_HOR_STR);
+        banco.adicionar(quinta4);
+
+        Horario quinta5 = new Horario();
+        quinta5.setDisciplina(HorarioVago);
+        quinta5.setDia_semana(Horario.QUINTA);
+        quinta5.setN_horario(Horario.QUINTO_HOR);
+        quinta5.setHorario(Horario.QUINTO_HOR_STR);
+        banco.adicionar(quinta5);
+
+        Horario quinta6 = new Horario();
+        quinta6.setDisciplina(HorarioVago);
+        quinta6.setDia_semana(Horario.QUINTA);
+        quinta6.setN_horario(Horario.SEXTO_HOR);
+        quinta6.setHorario(Horario.SEXTO_HOR_STR);
+        banco.adicionar(quinta6);
+
+        //Horários de Sexta
+
+        Horario sexta1 = new Horario();
+        sexta1.setDisciplina(NaoTemAula);
+        sexta1.setDia_semana(Horario.SEXTA);
+        sexta1.setN_horario(Horario.PRIMEIRO_HOR);
+        sexta1.setHorario(Horario.PRIMEIRO_HOR_STR);
+        banco.adicionar(sexta1);
+
+
+
+
+
+
 
 
 
