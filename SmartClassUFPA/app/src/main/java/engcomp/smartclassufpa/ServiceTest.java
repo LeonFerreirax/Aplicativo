@@ -1,4 +1,4 @@
-package br.com.lidiaxp.smartclassufpa;
+package engcomp.smartclassufpa;
 
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -19,6 +19,8 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+import engcomp.smartclassufpa.View.Activities.BaseActivity;
+
 public class ServiceTest extends Service {
     int mStartMode;
     IBinder mBinder;
@@ -30,19 +32,18 @@ public class ServiceTest extends Service {
             @Override
             public void run() {
                 for(int x = 0; x < 10; x++){
-                    new android.os.Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            getJson("/localhost:3000/sala");
-                        }
-                    }, 50000);
+                    getJson("/localhost:3000/sala");
+                    try {
+                        Thread.sleep(1000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
                     if(x == 8){
                         x = 0;
                     }
                 }
             }
         });
-        thread.start();
         thread.start();
     }
 
@@ -100,12 +101,12 @@ public class ServiceTest extends Service {
             @Override
             public void run() {
                 for(int x = 0; x < 10; x++){
-                    new android.os.Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            getJson("/localhost:3000/sala");
-                        }
-                    }, 50000);
+                    getJson("/localhost:3000/sala");
+                    try {
+                        Thread.sleep(1000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
                     if(x == 8){
                         x = 0;
                     }
@@ -138,7 +139,7 @@ public class ServiceTest extends Service {
 
     public void vibrar(Context context){
         NotificationManager nm = (NotificationManager) context.getSystemService(context.NOTIFICATION_SERVICE);
-        PendingIntent p = PendingIntent.getActivity(context, 0, new Intent(context, Main.class) ,0);
+        PendingIntent p = PendingIntent.getActivity(context, 0, new Intent(context, BaseActivity.class) ,0);
 
         NotificationCompat.Builder builder = new NotificationCompat.Builder(context);
         builder.setTicker("");
