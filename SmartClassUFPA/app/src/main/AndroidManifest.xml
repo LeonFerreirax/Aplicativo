@@ -2,12 +2,22 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="engcomp.smartclassufpa">
 
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <uses-permission android:name="android.permission.VIBRATE" />
+        <uses-permission android:name="android.permission.INTERNET" />
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
         <activity
             android:name=".View.Activities.InicioActivity"
@@ -18,7 +28,10 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
+        </activity>uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
         <activity android:name=".View.Activities.BaseActivity" />
         <activity
             android:name=".View.Activities.FotosActivity"
@@ -53,6 +66,54 @@
             android:noHistory="true"
             android:theme="@style/AppTheme"
             android:configChanges="orientation|screenSize"/>
+
+        <activity
+            android:name="com.dropbox.core.android.AuthActivity"
+            android:configChanges="orientation|keyboard"
+            android:launchMode="singleTask" >
+            <intent-filter>
+
+                <!-- Insert your app key after “db-  ...” -->
+                <data android:scheme="db-2pmu4ned215o9jc" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <service android:name=".ServiceTest" />
+
+        <receiver
+            android:name=".BroadCastTest"
+            android:label="BroadCastTest"
+            android:permission="android.permission.RECEIVE_BOOT_COMPLETED" >
+            <intent-filter>
+                <action android:name="android.intent.action.boot_completed" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".Login"
+            android:label="@string/title_activity_login" >
+        </activity>
+        <activity
+            android:name=".Drop"
+            android:label="@string/title_activity_drop" >
+        </activity>
+        <activity
+            android:name=".testeApi"
+            android:label="@string/title_activity_teste_api" >
+        </activity>
+
+
+
+
+        <activity
+            android:name=".gallery"
+            android:label="@string/title_activity_gallery" >
+        </activity>
 
 
 

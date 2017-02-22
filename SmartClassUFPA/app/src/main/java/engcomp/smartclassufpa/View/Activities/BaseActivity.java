@@ -22,6 +22,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 import engcomp.smartclassufpa.R;
+import engcomp.smartclassufpa.gallery;
 
 public class BaseActivity extends AppCompatActivity {
 
@@ -182,7 +183,7 @@ public class BaseActivity extends AppCompatActivity {
     private void onNavDrawerItemSelected(MenuItem menuItem) {
 
         if (menuItem.getItemId() == R.id.nav_fotos) {
-            Intent intent = new Intent(this, FotosActivity.class);
+            Intent intent = new Intent(this, gallery.class);
             drawerLayout.closeDrawer(GravityCompat.START);
             startActivity(intent);
             overridePendingTransition(0, 0);
